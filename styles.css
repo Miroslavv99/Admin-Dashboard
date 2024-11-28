@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 3px solid blueviolet;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1.2fr 4fr 1.2fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.menu {
+    border: 3px solid red;
+    grid-row: 1 / 4;
+}
+
+.header {
+    border: 3px solid blue;
+    grid-column: 2 / 4;
+}
+
+.cards-container {
+    border: 3px solid green;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.sidebar {
+    border: 3px solid rgb(255, 255, 0);
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
