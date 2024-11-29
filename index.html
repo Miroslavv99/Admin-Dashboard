@@ -10,11 +10,18 @@
   <body>
     <div class="container">
       <div id="form-container" class="hidden">
-        <form action="post">
+        <form id="project-form">
           <label for="new-title">Title Name</label>
-          <input type="text" id="new-title" />
+          <input type="text" id="new-title" minlength="5" />
           <label for="paragraph">Project Information</label>
-          <input type="text" id="paragraph" />
+          <textarea
+            type="text"
+            id="paragraph"
+            minlength="5"
+            rows="3"
+            cols="35"
+          ></textarea>
+          <button type="button" id="add-post">Add Post</button>
         </form>
       </div>
       <div class="header">
