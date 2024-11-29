@@ -10,9 +10,57 @@ p {
     color: rgb(103, 103, 103);
 }
 
+
+
 .hidden {
     display: none;
+    border: #ff0077;
 }
+
+#form-container {
+ 
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color:#fbbf24;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+ #project-form {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ gap: 20px;
+ }
+
+ #project-form input {
+    background-color: #e2e8f0;
+    height: 30px;
+    width: 90%;
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+    border-radius: 10px;
+}
+
+#project-form textarea {
+    background-color: #e2e8f0;
+    height: 200px;
+    max-height: 80%;
+    max-width: 90%;
+    border-radius: 10px;
+    font-size: 15px;
+    resize: none;
+    border: none;
+}
+
 
 .container {
     display: grid;
@@ -33,6 +81,7 @@ p {
     z-index: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
 }
+
 
 .cards-container {
     display: grid;
