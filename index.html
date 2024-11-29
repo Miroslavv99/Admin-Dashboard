@@ -9,7 +9,55 @@
   </head>
   <body>
     <div class="container">
-      <div class="header"></div>
+      <div class="header">
+        <div class="header-row">
+          <div class="search">
+            <form
+              method="post"
+              target="_blank"
+              action="https://httpbin.org/post"
+            >
+              <button type="submit" style="background: none; border: none">
+                <img
+                  id="search-icon"
+                  src="images/search (1).png"
+                  alt="search icon"
+                  height="20px"
+                  width="20px"
+                />
+              </button>
+              <input
+                type="text"
+                id="search-input"
+                name="search-query"
+                minlength="5"
+              />
+            </form>
+          </div>
+          <div class="user">
+            <img
+              src="images/bell (1).png"
+              alt="bell"
+              height="20px"
+              width="20px"
+            />
+            <img src="/images/bat.png" alt="user" height="50px" width="50px" />
+            <div style="width: 180px">Miroslav Bochko</div>
+          </div>
+        </div>
+        <div class="header-row">
+          <div class="user-info">
+            <img src="/images/bat.png" alt="user" height=80px" width="80px" />
+            <h4>Hi there,</h4>
+            <h2>Miroslav Bochko (@Miroslavv99)</h2>
+          </div>
+          <div class="button-container">
+            <button class="action-button">New</button>
+            <button class="action-button">Upload</button>
+            <button class="action-button">Share</button>
+          </div>
+        </div>
+      </div>
       <div class="menu"></div>
       <div class="cards-container">
         <div class="projects-title">Your Projects</div>
