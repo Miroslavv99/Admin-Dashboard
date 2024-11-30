@@ -84,4 +84,21 @@ cardInfo.forEach(el => {
 
 
 
+const userName = document.querySelector('.user div')
 
+userName.addEventListener('click', () => {
+    const userInfo = document.createElement('div')
+    userInfo.classList.add('user-card')
+    mainContainer.appendChild(userInfo)
+    userInfo.textContent = 'There could be information about you here'
+
+    const deleteUserCard = document.createElement('button')
+    deleteUserCard.classList.add('user-exit-button')
+    deleteUserCard.textContent = 'EXIT'
+    userInfo.appendChild(deleteUserCard)
+
+    deleteUserCard.addEventListener('click', () => {
+        userInfo.remove()
+    })
+
+})
