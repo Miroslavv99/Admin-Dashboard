@@ -6,7 +6,7 @@
 }
 
 
-p {
+.card p {
     color: rgb(103, 103, 103);
 }
 
@@ -14,30 +14,44 @@ p {
 
 .hidden {
     display: none;
-    border: #ff0077;
 }
 
 #form-container {
- 
+    color: white;
     position: fixed;
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
     background-color:#fbbf24;
-    height: 400px;
+    height: 450px;
     width: 400px;
     padding: 20px;
     border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
  #project-form {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+ }
+
+ #add-post {
+    border: none;
+    background-color: #0ea5e9;
+    height: 40px;
+    width: 100px;
+    border-radius: 30px;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    cursor: pointer;
  }
 
  #project-form input {
@@ -45,7 +59,7 @@ p {
     height: 30px;
     width: 90%;
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 400;
     border: none;
     border-radius: 10px;
 }
@@ -56,7 +70,7 @@ p {
     max-height: 80%;
     max-width: 90%;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 1rem;
     resize: none;
     border: none;
 }
@@ -70,8 +84,12 @@ p {
 }
 
 .menu {
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr 5fr;
     grid-row: 1 / 4;
     background-color: #0ea5e9;
+    padding-left: 30px;
+    gap: 50px;
 }
 
 .header {
@@ -109,13 +127,16 @@ p {
     border-radius: 10px;
     box-shadow: 2px 2px 2px rgb(194, 194, 194);
     background-color: white;
-    cursor: pointer;
     border-left: 10px solid #fbbf24;
     padding: 20px;
     margin: 20px;
     min-height: 200px;
     min-width: 350px;
     max-height: 240px;
+}
+
+.card p, .card h3 {
+    cursor: pointer;
 }
 
 .card div {
@@ -126,9 +147,23 @@ p {
     gap: 20px;
 }
 
-.card img {
-    opacity: 0.8;
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+.card div svg {
+    fill: #3c3c3c;
+    height: 24px;
+    width: 24px;
 }
+
 
 .announcements-card {
     display: grid;
@@ -166,7 +201,7 @@ p {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    font-size: 20px;
+    font-size: 1.3rem;
     font-family: Roboto, sans-serif;
     font-weight: 600;
     padding-bottom: 10px;
@@ -182,7 +217,7 @@ p {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    font-size: 20px;
+    font-size: 1.3rem;
     font-family: Roboto, sans-serif;
     font-weight: 600;
     padding-bottom: 10px;
@@ -199,12 +234,18 @@ p {
 .user div {
     font-family: Roboto, sans-serif;
     font-weight: 1000;
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 .header-row {
     display: flex;
     justify-content: space-around;
+}
+
+.header-row button svg {
+    fill: #3c3c3c;
+    height: 27px;
+    width: 27px;
 }
 
 .search {
@@ -221,7 +262,7 @@ p {
     width: 100%;
 }
 
-.search input {
+.search form input {
     border: none;
     background-color: #e2e8f0;
     border-radius: 20px;
@@ -275,3 +316,32 @@ p {
     cursor: pointer;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    margin-top: 20px;
+}
+
+.first-nav, .second-nav {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.first-nav div svg, .second-nav div svg {
+    fill: white;
+    height: 30px;
+    width: 30px;
+}
+
+.first-nav div button, .second-nav div button {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    align-items: center;
+    cursor: pointer;
+}
