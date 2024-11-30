@@ -10,9 +10,42 @@
     color: rgb(103, 103, 103);
 }
 
+.hidden-card-active {
+    display: none;
+}
+
+.hidden-card {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: 1fr 3fr 1fr;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(194, 194, 194);
+    background-color: white;
+    border-left: 10px solid #fbbf24;
+    padding: 20px;
+    margin: 20px;
+    height: 400px;
+    width: 500px;
+}
+
+.card-exit-button {
+height: 2rem;
+width: 3rem;
+border: none;
+cursor: pointer;
+border-radius: 8px;
+position: relative;
+left: 85%;
+background-color: #c1c1c1;
+}
 
 
-.hidden {
+.hidden-form {
     display: none;
 }
 
@@ -76,7 +109,7 @@
 }
 
 
-.container {
+.main-container {
     display: grid;
     height: 100vh;
     grid-template-columns: minmax(300px, 1.2fr) 4fr minmax(300px, 1.2fr);
