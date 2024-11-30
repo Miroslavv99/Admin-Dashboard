@@ -10,9 +10,14 @@
     color: rgb(103, 103, 103);
 }
 
-.hidden-card-active {
-    display: none;
+hr {
+    border: none;
+    height: 1px;
+    background-color: #adadad; 
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
+
 
 .hidden-card {
     position: fixed;
@@ -33,15 +38,15 @@
     width: 500px;
 }
 
-.card-exit-button {
-height: 2rem;
-width: 3rem;
-border: none;
-cursor: pointer;
-border-radius: 8px;
-position: relative;
-left: 85%;
-background-color: #c1c1c1;
+ .card-exit-button {
+   height: 2rem;
+   width: 3rem;
+   border: none;
+   cursor: pointer;
+   border-radius: 8px;
+   position: relative;
+   left: 85%;
+   background-color: #c1c1c1;
 }
 
 
@@ -108,6 +113,37 @@ background-color: #c1c1c1;
     border: none;
 }
 
+.user-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px grey;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    height: 15rem;
+    width: 30rem;
+    background-color: #fbbf24;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.user-exit-button {
+    height: 2rem;
+    width: 3rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    position: absolute;
+    left: 85%;
+    top: 80%;
+    background-color: #e2e8f0;
+}
 
 .main-container {
     display: grid;
@@ -200,12 +236,23 @@ background-color: #c1c1c1;
 
 .announcements-card {
     display: grid;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 0.1fr 1fr 0.1fr 1fr;
     border-radius: 10px;
     box-shadow: 2px 2px 2px rgb(194, 194, 194);
     background-color: white;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
+
+.announcements-card div {
+    gap: 10px;
+    padding: 5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
 
 .trending-card {
     display: grid;
@@ -265,6 +312,7 @@ background-color: #c1c1c1;
 }
 
 .user div {
+    cursor: pointer;
     font-family: Roboto, sans-serif;
     font-weight: 1000;
     font-size: 1.5rem;
@@ -317,7 +365,7 @@ background-color: #c1c1c1;
     height: 80px;
 }
 
-.user-info h2, h4 {
+.user-info h2 {
     font-family: Robobto, sans-serif;
     align-self: center;
 }
