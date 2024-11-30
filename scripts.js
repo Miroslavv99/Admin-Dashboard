@@ -8,12 +8,13 @@ const formTitle = document.querySelector('#new-title')
 const formText = document.querySelector('#paragraph')
 
 addButton.addEventListener('click', () => {
-    formContainer.classList.toggle('hidden')
+    formContainer.classList.toggle('hidden-form')
 })
 
 addPost.addEventListener('click', () => {
-
-
+    if(formTitle.value === '' || formText.value === '') {
+        return
+    } 
 
     const titleValue = formTitle.value 
     const textValue = formText.value
@@ -26,6 +27,7 @@ addPost.addEventListener('click', () => {
     const h3 = document.createElement('h3')
     h3.textContent = titleValue
     card.appendChild(h3)
+    h3.setAttribute('role', 'button')
 
     const text = document.createElement('p')
     text.textContent = textValue
@@ -39,11 +41,47 @@ addPost.addEventListener('click', () => {
     formTitle.value = ''
     formText.value = ''
 
-    formContainer.classList.toggle('hidden')
+    formContainer.classList.toggle('hidden-form')
 
     
-    formContainer.reset()
+    projectForm.reset()
 
 
 })
+
+
+const cardInfo = document.querySelectorAll('.card h3, .card p')
+const mainContainer = document.querySelector('.main-container')
+
+cardInfo.forEach(el => {
+    el.addEventListener('click', () => {
+        
+        const newHiddenCard = document.createElement('div')
+        newHiddenCard.classList.add('hidden-card')
+        mainContainer.appendChild(newHiddenCard)
+ 
+        const card = el.closest('.card');
+        
+        const cardParagraphText = card.querySelector('p')
+        const cardText = cardParagraphText.textContent
+        
+
+        const cardTitleText = card.querySelector('h3')
+        const titleText = cardTitleText.textContent
+        
+        newHiddenCard.innerHTML = `<strong>${titleText}</strong> <br> ${cardText}`
+
+        const cardExitBtn = document.createElement('button')
+        cardExitBtn.classList.add('card-exit-button')
+        cardExitBtn.textContent = 'EXIT'
+        newHiddenCard.appendChild(cardExitBtn)
+
+        cardExitBtn.addEventListener('click', () => {
+            newHiddenCard.remove()
+        })
+    })
+})
+
+
+
 
