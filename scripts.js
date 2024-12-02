@@ -50,7 +50,7 @@ addPost.addEventListener('click', () => {
 })
 
 
-const cardInfo = document.querySelectorAll('.card h3, .card p')
+const cardInfo = document.querySelectorAll('.card h4, .card p')
 const mainContainer = document.querySelector('.main-container')
 
 cardInfo.forEach(el => {
@@ -66,7 +66,7 @@ cardInfo.forEach(el => {
         const cardText = cardParagraphText.textContent
         
 
-        const cardTitleText = card.querySelector('h3')
+        const cardTitleText = card.querySelector('h4')
         const titleText = cardTitleText.textContent
         
         newHiddenCard.innerHTML = `<strong>${titleText}</strong> <br> ${cardText}`
