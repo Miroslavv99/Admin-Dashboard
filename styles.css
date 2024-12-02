@@ -163,13 +163,12 @@ hr {
 
 .header {
     display: grid;
+    position: relative;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-column: 2 / 4;
     z-index: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    
-    
 }
 
 
@@ -195,7 +194,6 @@ hr {
     padding: 20px;
     min-height: 200px;
     min-width: 350px;
-    max-height: 240px;
 }
 
 .card p, .card h4 {
@@ -363,16 +361,42 @@ hr {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 350px;
+    gap: 10%;
+    width: 60%;
     position: relative;
     left: 40%;
+}
+
+@media (max-width: 768px) {
+    .user img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .user-info img {
+        width: 30px;
+        height: 30px;
+    }
+    
+
+    .cards-container {
+        width: 100vw;
+    }
+
+
+
+    .card {
+        height: 400px;
+        width: 200px;
+    }
 }
 
 .user div {
     cursor: pointer;
     font-family: Roboto, sans-serif;
     font-weight: 1000;
-    font-size: 1rem;
+    font-size: 90%;
+    width: 90%;
 }
 
 
@@ -389,13 +413,15 @@ hr {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .search form {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
+    width: 99%;
 }
 
 .search form input {
@@ -427,7 +453,7 @@ hr {
     align-items: center;
     height: 5rem;
     padding-bottom: 10px;
-    width: 400px;
+    width: 80%;
     position: relative;
     left: 15%;
     
@@ -452,21 +478,22 @@ hr {
     grid-column: 2 / 3;
     grid-template-columns: 1fr 1fr 1fr;
     align-self: center;
+    justify-self: center;
     width: 60%;
-    position: relative;
-    left: 33%;
+    gap: 1rem;
+    
 }
 
 .action-button {
     border: none;
     background-color: #0ea5e9;
     height: 35px;
-    width: 80px;
+    width: 90%;
     border-radius: 30px;
     color: white;
     font-family: Roboto, sans-serif;
     font-weight: 900;
-    font-size: 1rem;
+    font-size: 90%;
     cursor: pointer;
 }
 
