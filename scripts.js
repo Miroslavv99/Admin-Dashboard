@@ -11,6 +11,45 @@ addButton.addEventListener('click', () => {
     formContainer.classList.toggle('hidden-form')
 })
 
+
+class Card {
+    _cardList = []
+    constructor(title, info) {
+        this.title = title
+        this.info = info
+    }
+
+    addCard(title, info) {
+        const card = new Card(title, info)
+        this._cardList.push(card)
+    }
+
+    displayCard() {
+        this._cardList.forEach(card => {
+            
+            const newCard = document.createElement('div')
+            newCard.classList.add('card')
+
+            const h3 = document.createElement('h3')
+            h3.textContent = card.title
+            newCard.appendChild(h3)
+            h3.setAttribute('role', 'button')
+
+            const cardText = document.createElement('p')
+            cardText.textContent = card.info
+            newCard.appendChild(cardText)
+
+           const actionButtonsClone = actionButtons.cloneNode(true)
+           newCard.appendChild(actionButtonsClone)
+
+           cardContainer.appendChild(newCard)
+        })
+    }
+}
+
+
+const cardList = new Card()
+
 addPost.addEventListener('click', () => {
     if(formTitle.value === '' || formText.value === '') {
         return
@@ -19,35 +58,19 @@ addPost.addEventListener('click', () => {
     const titleValue = formTitle.value 
     const textValue = formText.value
 
+    cardList.addCard(titleValue, textValue)
 
-    const card = document.createElement('div')
-    card.classList.add('card')
+    cardList.displayCard()
 
-
-    const h3 = document.createElement('h3')
-    h3.textContent = titleValue
-    card.appendChild(h3)
-    h3.setAttribute('role', 'button')
-
-    const text = document.createElement('p')
-    text.textContent = textValue
-    card.appendChild(text)
-
-    const actionButtonsClone = actionButtons.cloneNode(true)
-    card.appendChild(actionButtonsClone)
-
-    cardContainer.appendChild(card)
+    formContainer.classList.toggle('hidden-form')
 
     formTitle.value = ''
     formText.value = ''
 
-    formContainer.classList.toggle('hidden-form')
-
-    
     projectForm.reset()
-
-
 })
+
+
 
 
 const cardInfo = document.querySelectorAll('.card h4, .card p')
@@ -102,3 +125,5 @@ userName.addEventListener('click', () => {
     })
 
 })
+
+
