@@ -6,6 +6,7 @@
 }
 
 
+
 .card p {
     color: rgb(103, 103, 103);
 }
@@ -152,14 +153,17 @@ hr {
     grid-template-rows: 1fr 7fr;
 }
 
-.menu {
+
+#menu {
     display: grid;
-    grid-template-rows: 0.5fr 1fr 2fr 5fr;
+    grid-template-rows: 100px 200px 300px 500px;
     grid-row: 1 / 4;
     background-color: #0ea5e9;
     padding-left: 20px;
     gap: 40px;
 }
+
+
 
 .header {
     display: grid;
@@ -382,7 +386,6 @@ hr {
     .cards-container {
         width: 100vw;
     }
-
 
 
     .card {
